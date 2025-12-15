@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Global base styles */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  min-height: 100%;
+  background-color: #363941;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', sans-serif;
+  margin: 0 0 2.5rem;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
