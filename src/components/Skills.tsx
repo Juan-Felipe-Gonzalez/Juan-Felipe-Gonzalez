@@ -5,16 +5,16 @@ import { developerSkills } from '../data/skills';
 // Import skill logos
 import html5Logo from '../assets/img/Logos/html-5.webp';
 import css3Logo from '../assets/img/Logos/css3.webp';
-import sassLogo from '../assets/img/Logos/Sass Logo (Color)-01.webp';
+import sassLogo from '../assets/img/Logos/Sass.webp';
 import tailwindLogo from '../assets/img/Logos/TailwindCss.webp';
 import jsLogo from '../assets/img/Logos/JavaScript.webp';
 import tsLogo from '../assets/img/Logos/Typescript.webp';
 import phpLogo from '../assets/img/Logos/PHP-logo.svg.webp';
 import pythonLogo from '../assets/img/Logos/python.webp';
 import mysqlLogo from '../assets/img/Logos/mysql.webp';
-import mongodbLogo from '../assets/img/Logos/MongoDB2.png';
+import mongodbLogo from '../assets/img/Logos/MongoDB.png';
 import reactLogo from '../assets/img/Logos/React.png';
-import nodejsLogo from '../assets/img/Logos/NodeJsWhite.webp';
+import nodejsLogo from '../assets/img/Logos/node.png';
 import gulpLogo from '../assets/img/Logos/gulp.webp';
 import gitLogo from '../assets/img/Logos/git.webp';
 
@@ -37,7 +37,7 @@ const logoMap: Record<string, string> = {
 
 export default function Skills() {
   const { language } = useApp();
-  const t = translations[language];
+  const translation = translations[language];
 
   const getImagePath = (imageName: string) => {
     if (!imageName) return '';
@@ -46,7 +46,9 @@ export default function Skills() {
 
   return (
     <main className="w-[95%] max-w-[1200px] mx-auto lg:w-full">
-      <h2 className="font-['Inter',sans-serif] mb-10 text-3xl md:text-5xl font-black text-white mt-12">{t.developer.stack}</h2>
+      <h2 className="mb-10 text-3xl md:text-5xl font-black text-white mt-12">
+        {translation.developer.stack}
+      </h2>
 
       <div className="flex flex-wrap justify-center gap-2">
         {developerSkills.map((skill, index) => (
@@ -56,7 +58,7 @@ export default function Skills() {
           >
             {skill.isEnglish ? (
               <p className="font-bold whitespace-nowrap">
-                <a href={skill.englishUrl} target="_blank" rel="noopener noreferrer" className="text-[#232528]">
+                <a href={skill.englishUrl} target="_blank" rel="noopener noreferrer" className="text-[#232528] flex">
                   {skill.name}&nbsp;
                   <svg
                     className="pt-1.5 fill-black"
@@ -69,6 +71,7 @@ export default function Skills() {
                 </a>
               </p>
             ) : (
+              
               <p className="flex items-center font-bold whitespace-nowrap text-[1.7rem] md:text-[2rem] text-[#6b7280] leading-[1.8]">
                 {skill.image && (
                   <img
@@ -80,7 +83,7 @@ export default function Skills() {
                     loading="lazy"
                   />
                 )}
-                &nbsp;{skill.name}
+                &nbsp;{skill.name != 'MongoDB' && (skill.name)}
               </p>
             )}
           </div>

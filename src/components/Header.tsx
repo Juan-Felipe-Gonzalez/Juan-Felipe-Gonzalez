@@ -53,7 +53,7 @@ export default function Header() {
           </button>
 
           <div
-            className={`absolute z-999 top-[120%] p-6 rounded-lg bg-[#1e2022] text-white shadow-[0_10px_10px_0_rgba(0,0,0,0.4)] md:left-0 ${dropdownOpen ? '' : 'hidden'} flex flex-col items-center`}
+            className={`absolute z-[999] top-[120%] p-6 rounded-lg bg-[#1e2022] text-white shadow-[0_10px_10px_0_rgba(0,0,0,0.4)] md:left-0 ${dropdownOpen ? '' : 'hidden'} flex flex-col items-center`}
           >
             <button
               onClick={() => {

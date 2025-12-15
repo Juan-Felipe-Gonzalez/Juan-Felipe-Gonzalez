@@ -5,15 +5,16 @@ import { translations } from '../data/translations';
 // Import technology logos
 import html5Logo from '../assets/img/Logos/html-5.webp';
 import css3Logo from '../assets/img/Logos/css3.webp';
-import sassLogo from '../assets/img/Logos/Sass Logo (Color)-01.webp';
+import sassLogo from '../assets/img/Logos/Sass.webp';
 import jsLogo from '../assets/img/Logos/JavaScript.webp';
 import phpLogo from '../assets/img/Logos/PHP-logo.svg.webp';
 import mysqlLogo from '../assets/img/Logos/mysql.webp';
 import tsLogo from '../assets/img/Logos/Typescript.webp';
 import reactLogo from '../assets/img/Logos/React.png';
-import mongodbLogo from '../assets/img/Logos/MongoDB2.png';
+import mongodbLogo from '../assets/img/Logos/MongoDB.png';
 import wordpressLogo from '../assets/img/Logos/WordPress.webp';
 
+// Record: to define dictionaries or maps in TypeScript
 const logoMap: Record<string, string> = {
   'html-5': html5Logo,
   'css3': css3Logo,
@@ -27,16 +28,15 @@ const logoMap: Record<string, string> = {
   'WordPress': wordpressLogo,
 };
 
-interface ProjectCardProps {
+type ProjectCardProps = {
   project: Project;
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   const { language } = useApp();
-  const t = translations[language];
+  const translation = translations[language];
 
   const getImagePath = (tech: string) => {
-    if (tech === 'Vue.js') return null;
     return logoMap[tech] || null;
   };
 
@@ -52,8 +52,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="relative min-h-[220px] rounded-t-2xl">
           <img src={project.image} alt={project.title} className="object-cover h-full w-full rounded-t-2xl" height="200" loading="lazy" />
 
-          <div className="md:opacity-0 opacity-100 md:group-hover:opacity-100 md:group-focus:opacity-100 transition-opacity duration-200 ease-in-out absolute inset-0 flex flex-col justify-end p-8 overflow-hidden bg-linear-to-b from-[rgba(0,0,0,0.02)] to-[rgba(0,0,0,0.8)] backdrop-blur-[5px] rounded-t-2xl">
-            <h2 className="font-['Inter',sans-serif] mb-10 text-3xl md:text-5xl font-black text-white">{project.title}</h2>
+          <div className="md:opacity-0 opacity-100 md:group-hover:opacity-100 md:group-focus:opacity-100 transition-opacity duration-200 ease-in-out absolute inset-0 flex flex-col justify-end p-8 overflow-hidden bg-gradient-to-b from-[rgba(0,0,0,0.02)] to-[rgba(0,0,0,0.8)] backdrop-blur-[5px] rounded-t-2xl">
+            <h2 className="mb-10 text-3xl md:text-5xl font-black text-white">{project.title}</h2>
           </div>
         </div>
 
@@ -81,7 +81,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         <div className="flex justify-center bg-[#1d88b9] rounded-b-2xl">
           <p className="my-[1.4rem] mx-[1.4rem] text-white font-bold">
-            {t.developer.seeWebsite} <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            {translation.developer.seeWebsite} <i className="fa-solid fa-arrow-up-right-from-square"></i>
           </p>
         </div>
       </div>

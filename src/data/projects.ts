@@ -49,7 +49,7 @@ export const teamProjects: Project[] = [
   {
     id: 'francisco',
     title: 'Francisco Foundation',
-    url: 'https://yzflas3t9.wordpress.com/',
+    url: 'https://morenofoundation.org/',
     image: franciscoImg,
     technologies: ['html-5', 'css3', 'WordPress'],
     isTeamProject: true,

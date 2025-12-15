@@ -2,23 +2,24 @@ import { useApp } from '../context/AppContext';
 import { translations } from '../data/translations';
 import logoImg from '../assets/img/Logo.webp';
 import linkedinImg from '../assets/img/Logos/LinkedIn.webp';
-import resumePdf from '../assets/pdf/Juan Felipe Gonzalez Backend Developer(1).pdf';
+import resumePdf from '../assets/pdf/Juan Felipe Gonzalez Desarrollador Backend.pdf';
 
 export default function Footer() {
   const { language } = useApp();
-  const t = translations[language];
+  const translation = translations[language];
 
   const handleCopyEmail = async () => {
     try {
       await navigator.clipboard.writeText('felgart22@gmail.com');
       alert(`Email address copied to clipboard: felgart22@gmail.com`);
     } catch (err) {
+      console.log(err)
       alert('Error copying email');
     }
   };
 
   return (
-    <footer className="p-4 pb-8 min-h-40 bg-[#2a2c30]">
+    <footer className="p-12 min-h-40 bg-[#2a2c30]">
       <div className="flex flex-col-reverse items-center md:flex-row md:justify-evenly w-[95%] max-w-[1200px] mx-auto lg:w-full">
         <div className="mt-5 md:mt-0">
           <a href="/">
@@ -32,10 +33,10 @@ export default function Footer() {
           </a>
         </div>
 
-        <ul className="flex flex-col items-center md:flex-row">
+        <ul className="flex flex-col items-center ">
           <li className="list-none mb-3 md:mb-0">
             <a href="mailto:felgart22@gmail.com" target="_blank" rel="noopener noreferrer" className="text-white">
-              <span className="text-fuchsia-500 font-bold">{t.footer.email}</span> felgart22@gmail.com
+              <span className="text-fuchsia-500 font-bold">{translation.footer.email}</span> felgart22@gmail.com
             </a>
             <button
               onClick={handleCopyEmail}
@@ -57,9 +58,9 @@ export default function Footer() {
               href={resumePdf}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white"
+              className="text-white flex"
             >
-              {t.footer.curriculum}{' '}
+              {translation.footer.curriculum}{' '}&nbsp;
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="1em"
@@ -72,7 +73,7 @@ export default function Footer() {
           </li>
           <li className="flex gap-8 list-none mb-3 md:mb-0">
             <a
-              href="https://www.linkedin.com/in/juan-f-gonzalez/"
+              href="https://www.linkedin.com/in/juan-felipe-gonzalez-backend/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center p-2 bg-[#1e2022] rounded-2xl"
@@ -83,7 +84,7 @@ export default function Footer() {
         </ul>
       </div>
 
-      <p className="text-white text-center">{t.footer.copyright} {new Date().getFullYear()}</p>
+      <p className="text-white text-center">{translation.footer.copyright} {new Date().getFullYear()}</p>
     </footer>
   );
 }
