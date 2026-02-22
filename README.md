@@ -2,7 +2,8 @@
 
 Juan Felipe González
 
-Backend Developer
+FullStack Developer
+Desarrollador FullStack
 
 ## Cómo correr el proyecto:
 

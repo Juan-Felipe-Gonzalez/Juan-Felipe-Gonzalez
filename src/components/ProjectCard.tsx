@@ -9,8 +9,8 @@ import jsLogo from "../assets/img/Logos/JavaScript.webp";
 import phpLogo from "../assets/img/Logos/PHP-logo.svg.webp";
 import mysqlLogo from "../assets/img/Logos/mysql.webp";
 import tsLogo from "../assets/img/Logos/Typescript.webp";
-import reactLogo from "../assets/img/Logos/React.png";
-import mongodbLogo from "../assets/img/Logos/MongoDB.png";
+import reactLogo from "../assets/img/Logos/React.webp";
+import mongo from "../assets/img/Logos/mongo.webp";
 import wordpressLogo from "../assets/img/Logos/WordPress.webp";
 
 // Record: to define dictionaries or maps in TypeScript
@@ -23,7 +23,7 @@ const logoMap: Record<string, string> = {
   mysql: mysqlLogo,
   Typescript: tsLogo,
   React: reactLogo,
-  MongoDB2: mongodbLogo,
+  MongoDB2: mongo,
   WordPress: wordpressLogo,
 };
 

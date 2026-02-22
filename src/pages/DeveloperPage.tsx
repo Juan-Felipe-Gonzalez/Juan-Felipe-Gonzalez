@@ -10,9 +10,9 @@ export default function DeveloperPage() {
       <div className="flex flex-col space-y-16 mb-16">
         <Banner />
         <About />
+        <Skills />
         <Projects />
         <TeamProjects />
-        <Skills />
       </div>
     </>
   );

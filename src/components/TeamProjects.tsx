@@ -9,7 +9,7 @@ export default function TeamProjects() {
 
   return (
     <div>
-      <div className="w-[95%] max-w-[1200px] mx-auto lg:w-full" id="projects">
+      <div className="w-[95%] max-w-[1200px] mx-auto lg:w-full">
       
       <div className="mt-12">
           <h2 className="mb-10 text-3xl md:text-5xl font-black text-white mt-12">

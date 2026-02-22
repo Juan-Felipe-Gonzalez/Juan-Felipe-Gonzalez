@@ -73,7 +73,7 @@ export default function Footer() {
           </li>
           <li className="flex gap-8 list-none mb-3 md:mb-0">
             <a
-              href="https://www.linkedin.com/in/juan-felipe-gonzalez-backend/"
+              href="https://www.linkedin.com/in/juan-felipe-gonzalez-fullstack/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center p-2 bg-[#1e2022] rounded-2xl"
