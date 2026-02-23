@@ -2,31 +2,6 @@ import type { Project } from "../data/projects";
 import { useApp } from "../context/AppContext";
 import { translations } from "../data/translations";
 
-import html5Logo from "../assets/img/Logos/html-5.webp";
-import css3Logo from "../assets/img/Logos/css3.webp";
-import sassLogo from "../assets/img/Logos/Sass.webp";
-import jsLogo from "../assets/img/Logos/JavaScript.webp";
-import phpLogo from "../assets/img/Logos/PHP-logo.svg.webp";
-import mysqlLogo from "../assets/img/Logos/mysql.webp";
-import tsLogo from "../assets/img/Logos/Typescript.webp";
-import reactLogo from "../assets/img/Logos/React.webp";
-import mongo from "../assets/img/Logos/mongo.webp";
-import wordpressLogo from "../assets/img/Logos/WordPress.webp";
-
-// Record: to define dictionaries or maps in TypeScript
-const logoMap: Record<string, string> = {
-  "html-5": html5Logo,
-  css3: css3Logo,
-  "Sass Logo (Color)-01": sassLogo,
-  JavaScript: jsLogo,
-  "PHP-logo.svg": phpLogo,
-  mysql: mysqlLogo,
-  Typescript: tsLogo,
-  React: reactLogo,
-  MongoDB2: mongo,
-  WordPress: wordpressLogo,
-};
-
 type ProjectCardProps = {
   project: Project;
 };
@@ -34,10 +9,6 @@ type ProjectCardProps = {
 export default function ProjectCard({ project }: ProjectCardProps) {
   const { language } = useApp();
   const translation = translations[language];
-
-  const getImagePath = (tech: string) => {
-    return logoMap[tech] || null;
-  };
 
   return (
     <div>
@@ -60,28 +31,21 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
 
           <div className="flex flex-wrap gap-4 justify-end py-[1.1rem] pr-4 pl-8">
-            {project.technologies.map((tech, index) => {
-              const imagePath = getImagePath(tech);
-              return (
-                <div
-                  key={index}
-                  className="flex items-center justify-center rounded-md max-h-[22px]"
-                >
-                  {imagePath ? (
-                    <img
-                      src={imagePath}
-                      alt={`${tech} logo`}
-                      className="max-h-[22px] w-auto"
-                      height="40"
-                      width="40"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <p className="text-white text-base font-bold">{tech}</p>
-                  )}
-                </div>
-              );
-            })}
+            {project.technologies.map((techSrc, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center rounded-md max-h-[22px]"
+              >
+                <img
+                  src={techSrc}
+                  alt="Technology logo"
+                  className="max-h-[22px] w-auto"
+                  height="40"
+                  width="40"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
 
           <div className="flex justify-center bg-[#1d88b9]">
