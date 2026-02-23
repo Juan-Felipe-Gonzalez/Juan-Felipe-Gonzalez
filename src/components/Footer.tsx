@@ -56,6 +56,13 @@ export default function Footer() {
               />
             </a>
             <a
+              href="https://wa.me/573214984686"
+              target="_blank"
+              className="flex items-center justify-center h-22 w-22 shrink-0 p-4 bg-[#1e2022] rounded-2xl text-white font-bold text-3xl"
+            >
+              <i className="fa-brands fa-whatsapp text-[#25d366] text-5xl"></i>
+            </a>
+            <a
               href="mailto:felgart22@gmail.com"
               target="_blank"
               className="flex items-center justify-center h-22 w-22 shrink-0 p-4 bg-[#1e2022] rounded-2xl"
