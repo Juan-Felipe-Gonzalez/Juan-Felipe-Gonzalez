@@ -2,7 +2,9 @@ import { useApp } from '../context/AppContext';
 import { translations } from '../data/translations';
 import logoImg from '../assets/img/Logo.webp';
 import linkedinImg from '../assets/img/Logos/LinkedIn.webp';
+import github from '../assets/img/Logos/github.webp';
 import resumePdf from '../assets/pdf/Juan Felipe Gonzalez Desarrollador Backend.pdf';
+import { HashLink } from 'react-router-hash-link';
 
 export default function Footer() {
   const { language } = useApp();
@@ -22,7 +24,7 @@ export default function Footer() {
     <footer className="p-12 min-h-40 bg-[#2a2c30]">
       <div className="flex flex-col-reverse items-center md:flex-row md:justify-evenly w-[95%] max-w-[1200px] mx-auto lg:w-full">
         <div className="mt-5 md:mt-0">
-          <a href="/">
+          <HashLink to="#home">
             <img
               src={logoImg}
               alt="Juan Felipe González Logo"
@@ -30,7 +32,7 @@ export default function Footer() {
               height="14"
               width="108"
             />
-          </a>
+          </HashLink>
         </div>
 
         <ul className="flex flex-col items-center ">
@@ -75,16 +77,21 @@ export default function Footer() {
             <a
               href="https://www.linkedin.com/in/juan-felipe-gonzalez-fullstack/"
               target="_blank"
-              rel="noopener noreferrer"
               className="flex items-center p-2 bg-[#1e2022] rounded-2xl"
             >
               <img src={linkedinImg} alt="LinkedIn Logo" className="max-h-14 w-auto" height="50" width="50" />
+            </a>
+            <a
+              href="https://github.com/Juan-Felipe-Gonzalez"
+              target="_blank"
+              className="flex items-center p-2 bg-[#1e2022] rounded-2xl"
+            >
+              <img src={github} alt="github logo" className="max-h-14 w-auto" height="50" width="50" />
             </a>
           </li>
         </ul>
       </div>
 
-      <p className="text-white text-center">{translation.footer.copyright} {new Date().getFullYear()}</p>
-    </footer>
+      <p className="text-white text-center">{translation.footer.copyright} {new Date().getFullYear()}</p>    </footer>
   );
 }

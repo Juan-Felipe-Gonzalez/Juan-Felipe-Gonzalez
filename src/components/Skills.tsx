@@ -10,6 +10,13 @@ export default function Skills() {
 
   return (
     <main className="w-[95%] max-w-[1200px] mx-auto lg:w-full" id='stack'>
+
+      <h2
+        className="mb-1 md:mb-10 text-3xl md:text-5xl font-black text-white mt-12"
+      >
+        {translation.nav.stack}
+      </h2>
+
       <div className='flex flex-wrap m-auto justify-center'>
           <button 
             className={`border cursor-pointer shadow-lg shadow-[#151530]/50 p-6 m-1 rounded-xl text-white  ${skillSelected == translation.titlesSkills.frontend ? 'border-[#21215b] bg-[#151530] flex-1' : 'border-[#20202e] bg-[#111118] flex'}`}

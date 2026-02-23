@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { translations } from '../data/translations';
+import { HashLink } from 'react-router-hash-link';
 // import logoImg from '../assets/img/Logo.webp';
 import flagEn from '../assets/img/18165.webp';
 import flagEs from '../assets/img/18168.webp';
@@ -28,12 +29,15 @@ export default function Header() {
   const otherLang = language === 'en' ? 'es' : 'en';
 
   return (
-    <header className="bg-[#2a2c30] shadow-[1px_10px_10px_-4px_rgba(0,0,0,0.7)] h-auto md:h-40">
+    <header 
+      className="bg-[#2a2c30] shadow-[1px_10px_10px_-4px_rgba(0,0,0,0.7)] h-auto md:h-40"
+      id="home"
+    >
       <div className="w-[95%] max-w-[1200px] mx-auto lg:w-full flex items-center justify-evenly h-full md:px-2 md:justify-evenly">
         <nav className='flex gap-4 md:gap-20 flex-col md:flex-row m-7 md:m-0'>
-          <Link to="#aboutMe" className='text-white font-bold'>{translation.nav.aboutMe}</Link>
-          <Link to="#projects" className='text-white font-bold'>{translation.nav.projects}</Link>
-          <Link to="#stack" className='text-white font-bold'>{translation.nav.stack}</Link>
+          <HashLink to="#aboutMe" className='text-white font-bold'>{translation.nav.aboutMe}</HashLink>
+          <HashLink to="#stack" className='text-white font-bold'>{translation.nav.stack}</HashLink>
+          <HashLink to="#projects" className='text-white font-bold'>{translation.nav.projects}</HashLink>
         </nav>
 
         <div className="relative" ref={dropdownRef}>
