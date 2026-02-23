@@ -32,12 +32,10 @@ import render from '../assets/img/Logos/render.webp';
 export type Skill = {
   name: string;
   image: string;
-  isEnglish?: boolean;
-  englishUrl?: string;
 }
 
 export const developerSkills = {
-  'Frontend' : [
+  '1' : [
     { name: 'React', image: react },
     { name: 'Tailwind', image: tailwind },
     { name: 'Sass', image: sass },
@@ -45,7 +43,7 @@ export const developerSkills = {
     { name: 'HTML', image: html5 },
     { name: 'CSS', image: css3 },
   ], 
-  'Backend & Data bases': [
+  '2': [
     { name: 'TypeScript', image: ts },
     { name: 'JavaScript', image: js },
     { name: 'Java', image: java },
@@ -58,7 +56,7 @@ export const developerSkills = {
     { name: 'PHP', image: php },
     { name: 'Python', image: python },
   ],
-  'Cloud & Tools': [
+  '3': [
     { name: 'Git', image: git },
     { name: 'Github', image: github },
     { name: 'Postman', image: postman },
@@ -68,11 +66,11 @@ export const developerSkills = {
     { name: 'Render', image: render},
     { name: 'Hostinger', image: hostinger},
   ],
-  'Languages': [
-    { name: 'Español', image: '' },
+  '4': [
+    { name: 'Spanish', image: '' },
     { name: 'English B2', image: '' },
   ],
-  'Design': [
+  '5': [
     { name: 'Figma', image: figma },
     { name: 'Canva', image: canva },
     { name: 'Illustrator', image: illustrator },

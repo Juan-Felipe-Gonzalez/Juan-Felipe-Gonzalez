@@ -18,20 +18,16 @@ export const translations = {
       seeWebsite: 'See Website',
     },
     titlesSkills: {
-      frontend: 'Frontend',
-      backend: 'Backend & Data bases',
-      cloud: 'Cloud & Tools',
-      languages: 'Languages',
-      design: 'Design'
+      frontend: { name: 'Frontend', id: 1 },
+      backend: { name: 'Backend & Data bases', id: 2 },
+      cloud: { name: 'Cloud & Tools', id: 3 },
+      languages: { name: 'Languages', id: 4 },
+      design: { name: 'Design', id: 5 }
     },
     header: {
-      developer: 'Developer',
-      designer: 'Designer',
       language: 'English',
     },
     footer: {
-      email: 'Email:',
-      curriculum: 'Curriculum Vitae',
       copyright: 'Copyright ⓒ',
     },
   },
@@ -39,7 +35,7 @@ export const translations = {
     nav: {
       aboutMe: 'Sobre Mi',
       projects: 'Proyectos',
-      stack: 'Lenguajes'
+      stack: 'Habilidades Técnicas'
     },
     developer: {
       title: 'Desarrollador FullStack',
@@ -55,20 +51,16 @@ export const translations = {
       github: 'Gitub'
     },
     titlesSkills: {
-      frontend: 'Frontend',
-      backend: 'Backend & Data bases',
-      cloud: 'Cloud & Tools',
-      languages: 'Languages',
-      design: 'Design'
+      frontend: { name: 'Frontend', id: 1 },
+      backend: { name: 'Backend & Bases de datos', id: 2 },
+      cloud: { name: 'Nube & Herramientas', id: 3 },
+      languages: { name: 'Idiomas', id: 4 },
+      design: { name: 'Diseño', id: 5 }
     },
     header: {
-      developer: 'Desarrollador',
-      designer: 'Diseñador',
       language: 'Español',
     },
     footer: {
-      email: 'Correo:',
-      curriculum: 'Currículum Vitae',
       copyright: 'Derechos de autor ⓒ',
     },
   },
