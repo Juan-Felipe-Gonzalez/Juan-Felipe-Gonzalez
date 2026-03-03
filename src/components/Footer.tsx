@@ -1,11 +1,7 @@
-import { useApp } from "../context/AppContext";
-import { translations } from "../data/translations";
 import logoImg from "../assets/img/Logo.webp";
 import { HashLink } from "react-router-hash-link";
 
 export default function Footer() {
-  const { language } = useApp();
-  const translation = translations[language];
 
   return (
     <footer className="p-12 min-h-40 bg-[#2a2c30]">
