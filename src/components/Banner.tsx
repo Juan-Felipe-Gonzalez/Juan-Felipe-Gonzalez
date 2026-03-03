@@ -21,7 +21,7 @@ export default function Banner() {
           {translation.developer.title}
         </h2>
 
-        <div className="md:flex justify-start gap-12">
+        <div className="flex flex-col sm:flex-row justify-start gap-12 gap-y-8">
           <a
             className="flex items-center justify-center p-8 border-[#20202e] bg-[#111118] rounded-4xl gap-4 shadow-[0_5px_9px_hsla(0,0%,100%,0.35)]"
             href="https://www.linkedin.com/in/juan-felipe-gonzalez-fullstack/"

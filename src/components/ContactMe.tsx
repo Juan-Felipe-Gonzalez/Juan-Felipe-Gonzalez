@@ -65,17 +65,18 @@ export default function ContactMe() {
 
   return (
     <div className="w-[95%] max-w-[1200px] mx-auto lg:w-full mt-12">
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] items-start">
-        <div className="flex flex-col gap-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white">
             {translation.contact.contact}
           </h2>
+      <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8 items-start">
+        <div className="flex flex-col gap-4">
+          
           <p className="text-white text-[1.3rem] md:text-[1.6rem] leading-relaxed">
             {translation.developer.contactMessage}
           </p>
 
           <ul className="flex flex-col">
-            <li className="flex gap-8 list-none mb-3 md:mb-0">
+            <li className="flex gap-6 md:gap-8 list-none mb-3 md:mb-0">
               <a
                 href="https://www.linkedin.com/in/juan-felipe-gonzalez-fullstack/"
                 target="_blank"
