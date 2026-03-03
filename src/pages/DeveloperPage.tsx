@@ -3,6 +3,7 @@ import Skills from "../components/Skills";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import TeamProjects from "../components/TeamProjects";
+import ContactMe from "../components/ContactMe";
 
 export default function DeveloperPage() {
   return (
@@ -13,6 +14,7 @@ export default function DeveloperPage() {
         <Skills />
         <Projects />
         <TeamProjects />
+        <ContactMe />
       </div>
     </>
   );

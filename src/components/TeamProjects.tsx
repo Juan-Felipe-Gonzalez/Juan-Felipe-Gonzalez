@@ -10,12 +10,12 @@ export default function TeamProjects() {
   return (
     <div>
       <div className="w-[95%] max-w-[1200px] mx-auto lg:w-full">
-      
-      <div className="mt-12">
+
+        <div className="mt-12">
           <h2 className="mb-10 text-3xl md:text-5xl font-black text-white mt-12">
             {translation.developer.teamProjects}
           </h2>
-          
+
           <p className="text-[1.7rem] md:text-[2rem] text-gray-200 leading-[1.8] mb-7">
             {translation.developer.projectsTeamDescription}
           </p>

@@ -27,6 +27,15 @@ export const translations = {
     header: {
       language: 'English',
     },
+    contact: {
+      contact: 'Contact Me',
+      name: 'Name',
+      subject: 'Subject',
+      description: 'Description',
+      email: 'Email',
+      succes: 'Message sent succesfully',
+      submitting: 'Sending message'
+    },
     footer: {
       copyright: 'Copyright ⓒ',
     },
@@ -59,6 +68,15 @@ export const translations = {
     },
     header: {
       language: 'Español',
+    },
+    contact: {
+      contact: 'Contáctame',
+      name: 'Nombre',
+      subject: 'Asunto',
+      description: 'Descripción',
+      email: 'Correo Electrónico',
+      succes: 'Mensaje enviado correctamente',
+      submitting: 'Enviando mensaje'
     },
     footer: {
       copyright: 'Derechos de autor ⓒ',
