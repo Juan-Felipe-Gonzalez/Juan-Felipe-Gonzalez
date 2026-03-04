@@ -16,3 +16,4 @@ npm run dev
 
 * React + vite + typescript
 * TailwindCss
+* FormSpree
