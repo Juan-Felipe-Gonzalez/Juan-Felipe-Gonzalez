@@ -10,6 +10,7 @@ import flagEs from '../assets/img/18168.webp';
 export default function Header() {
   const { language, setLanguage } = useApp();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const translation = translations[language];
 
@@ -33,12 +34,47 @@ export default function Header() {
       className="bg-[#2a2c30] shadow-[1px_10px_10px_-4px_rgba(0,0,0,0.7)] h-auto md:h-40"
       id="home"
     >
-      <div className="w-[95%] max-w-[1200px] mx-auto lg:w-full flex items-center justify-evenly h-full md:px-2 md:justify-evenly">
-        <nav className='flex gap-4 md:gap-20 flex-col md:flex-row m-7 md:m-0'>
-          <HashLink to="#aboutMe" className='text-white font-bold'>{translation.nav.aboutMe}</HashLink>
-          <HashLink to="#stack" className='text-white font-bold'>{translation.nav.stack}</HashLink>
-          <HashLink to="#projects" className='text-white font-bold'>{translation.nav.projects}</HashLink>
-        </nav>
+      <div className="w-[95%] max-w-[1200px] mx-auto lg:w-full flex items-center justify-between h-full md:px-2 md:justify-evenly">
+        <div className="flex items-center gap-4">
+          <button
+            type="button"
+            className="text-white text-4xl p-8 -ml-4 md:hidden transition-transform duration-300 ease-out active:scale-90"
+            aria-label="Toggle navigation"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+          >
+            <i
+              className={`fa-solid ${isMenuOpen ? 'fa-xmark' : 'fa-bars'} transform transition-transform duration-300 ease-out ${
+                isMenuOpen ? 'rotate-90' : 'rotate-0'
+              }`}
+            ></i>
+          </button>
+
+          <nav
+            className={`${isMenuOpen ? 'flex' : 'hidden'} md:flex gap-4 md:gap-20 flex-col md:flex-row m-7 md:m-0 transition-all duration-300 ease-out`}
+          >
+            <HashLink
+              to="#aboutMe"
+              className="text-white font-bold"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {translation.nav.aboutMe}
+            </HashLink>
+            <HashLink
+              to="#stack"
+              className="text-white font-bold"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {translation.nav.stack}
+            </HashLink>
+            <HashLink
+              to="#projects"
+              className="text-white font-bold"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {translation.nav.projects}
+            </HashLink>
+          </nav>
+        </div>
 
         <div className="relative" ref={dropdownRef}>
           <button
